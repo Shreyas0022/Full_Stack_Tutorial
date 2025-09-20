@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
     <title>event landing page</title>
   </head>
   <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
     <!--header with navbar-->
   <header class="bg-white fixed w-full top-0 left-0 shadow-md z-10">
+<!--Mobile Dropdown-->
+<div id="mobile-menu" class="md:hidden hidden absolute top-16 left-0 w-full bg-white shadow-lg z-20 text-black">
+  <nav class="flex flex-col py-4 px-6 space-y-2">
+    <a href="#About" class="block px-4 py-2 rounded text-black hover:bg-blue-200">About</a>
+    <a href="#Speakers" class="block px-4 py-2 rounded text-black hover:bg-blue-200">Speakers</a>
+    <a href="#Schedule" class="block px-4 py-2 rounded text-black hover:bg-blue-200">Schedule</a>
+    <a href="#Register" class="block px-4 py-2 rounded bg-blue-600 text-white hover:bg-yellow-700">Register</a>
+  </nav>
+</div>
+
+   
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
@@ -23,18 +35,18 @@
             </nav>
 
             <!-- mobile Hamburger-->
-             <button id="menu-btn" class="md:hidden flex items-center px-3 py-2 border rounded text-black border-black hover:text-blue-600 hover:border-blue-600">
+             <button id="menu-btn" class="md:hidden flex items-center px-3 py-2 border rounded text-black border-black hover:text-blue-600 hover:border-blue-600 focus:outline-none">
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-</svg>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
              </button>
           </div>
         </div>
     </header>
     <!--Hero Section -->
     <section class="bg-gradient-to-r from-blue-500 to-purple-600 to-pink-600 text-white pt-32 pb-20">
-       <div class="max-w-4xl mx-auto px-6 py-32 text-center">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+       <div class="max-w-4xl mx-auto px-5 py-32 text-center">
+      <h2 class="text-4xl md:text-4xl font-extrabold mb-6">
         Ignite Your Creativity at Inspire 2025
       </h2>
         <p class="text-lg sm:text-xl mb-8">Join Visionaries and innovators for a two-day celeberation of ideas, tech and art</p>
@@ -94,35 +106,43 @@
   <div class="max-w-3xl mx-auto px-4">
     <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Reserve Your Spot</h2>
     
-    <form class="space-y-6">
+    <form id="registrationForm" class="space-y-6" novalidate>
       <!-- Name Input -->
-      <div>
+      <div class="flex flex-col gap-1">
         <input 
+          id="name"
           type="text" 
           placeholder="Name" 
           class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          required
         >
+        <span id="nameError" class="text-red-500 text-sm ml-1 hidden">Enter a valid name</span>
       </div>
       
       <!-- Email Input -->
-      <div>
+      <div class="flex flex-col gap-1">
         <input 
+          id="email"
           type="email" 
           placeholder="Email" 
           class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          required
         >
+        <span id="emailError" class="text-red-500 text-sm ml-1 hidden">Enter a valid email address</span>
       </div>
       
       <!-- Register Button -->
       <div>
         <button 
+          id="submitBtn"
           type="submit" 
           class="w-full px-6 py-3 text-lg font-semibold bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition duration-200"
         >
           Register Now
         </button>
+      </div>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden">
+        <p class="text-white bg-green-500 rounded-lg px-4 py-2 text-center">Registration successful! Thank you for registering.</p>
       </div>
     </form>
   </div>
@@ -156,7 +176,7 @@
 <!--Footer-->
 <footer class="bg-gray-800 text-white py-6">
   <div class="max-w-7xl mx-auto px-4 text-center">
-    <p>&copy; 2024 EventX. All rights reserved.</p>
+    <p>&copy; 2025 EventX. All rights reserved.</p>
   </div>
 </footer>
 
