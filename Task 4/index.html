@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>event landing page</title>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
+    <!--header with navbar-->
+  <header class="bg-white fixed w-full top-0 left-0 shadow-md z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="#" class="text-2xl font-bold text-blue-600">EventX</a>
+        </div>
+            <!-- menu -->
+            <nav class="hidden md:flex space-x-8 items-center text-black">
+              <a href="#About" class="hover:text-blue-600">About</a>
+              <a href="#Speakers" class="hover:text-blue-600">Speakers</a>
+              <a href="#Schedule" class="hover:text-blue-600">Schedule</a>
+              <a href="#Register" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700">Register</a>
+            </nav>
+
+            <!-- mobile Hamburger-->
+             <button id="menu-btn" class="md:hidden flex items-center px-3 py-2 border rounded text-black border-black hover:text-blue-600 hover:border-blue-600">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+             </button>
+          </div>
+        </div>
+    </header>
+    <!--Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-purple-600 to-pink-600 text-white pt-32 pb-20">
+       <div class="max-w-4xl mx-auto px-6 py-32 text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Ignite Your Creativity at Inspire 2025
+      </h2>
+        <p class="text-lg sm:text-xl mb-8">Join Visionaries and innovators for a two-day celeberation of ideas, tech and art</p>
+      <a href="#Register" class="px-8 py-3 text-lg font-semibold bg-white text-indigo-700 rounded-full shadow-lg">Reserve Your Seat</a>
+      </div>
+    </section>
+    <!--About Section-->
+    <section class="flex items-center justify-center min-h-screen">
+      <div class="max-w-7xl mx-auto text-center px-4">
+        <h1 class="text-4xl font-extrabold mb-6">About the Event</h1>
+        <p class="text-lg sm:text-xl mb-8">Inspire 2025 is a premier conference bringing together creators, developers, and entrepreneurs to explore cutting-edge ideas and transformative technologies.</p>
+      </div>
+    </section>
+    <!--Event Highlights Section-->
+    <section class="py-20 bg-gray-101">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Event Highlights</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Keynote Talks-->
+      <div class="bg-yellow-700 p-6 rounded-lg shadow-lg">
+        <div class="text-white-600 mb-4">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Keynote Talks</h3>
+        <p>Hear from industry leaders shaping tomorrow's world.</p>
+      </div>
+
+      <!-- Hands-on Workshops-->
+      <div class="bg-yellow-700 p-6 rounded-lg shadow-lg">
+        <div class="text-white-600 mb-4">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Hands-on Workshops</h3>
+        <p>Gain practical skills with expert-led sessions.</p>
+      </div>
+
+      <!-- Networking -->
+      <div class="bg-yellow-700 p-6 rounded-lg shadow-lg">
+        <div class="text-white-600 mb-4">
+          <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Networking</h3>
+        <p>Connect with peers and potential collaborators.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Spot Reserve Section-->
+<section class="py-20 bg-blue-600">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Reserve Your Spot</h2>
+    
+    <form class="space-y-6">
+      <!-- Name Input -->
+      <div>
+        <input 
+          type="text" 
+          placeholder="Name" 
+          class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        >
+      </div>
+      
+      <!-- Email Input -->
+      <div>
+        <input 
+          type="email" 
+          placeholder="Email" 
+          class="w-full px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        >
+      </div>
+      
+      <!-- Register Button -->
+      <div>
+        <button 
+          type="submit" 
+          class="w-full px-6 py-3 text-lg font-semibold bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition duration-200"
+        >
+          Register Now
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<!--Schedule Section-->
+<section class="py-20 bg-gray-101">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Event Schedule</h2>
+    
+    <div class="space-y-6">
+      <!-- Day 1 -->
+      <div class="bg-yellow-700 p-6 rounded-lg shadow-lg">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <h3 class="text-xl font-semibold">Day 1 - Vision & Innovation</h3>
+          <span class="text-white-600">10:00 AM - 5:00 PM</span>
+        </div>
+        <p class="text-white-600">Keynotes and product showcases.</p>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="bg-yellow-700 p-6 rounded-lg shadow-lg">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+          <h3 class="text-xl font-semibold">Day 2 - Workshops & Networking</h3>
+          <span class="text-white-600">10:00 AM - 4:00 PM</span>
+        </div>
+        <p class="text-white-600">Interactive sessions and meetups.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Footer-->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <p>&copy; 2024 EventX. All rights reserved.</p>
+  </div>
+</footer>
+
+  </body>
+</html>
